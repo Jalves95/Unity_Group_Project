@@ -9,7 +9,7 @@ public class Corn_Dude_Move : MonoBehaviour
     public Animator anim;
     public Camera cam;
 
-    private float speed = 50f, camSensitivity = 100f;
+    private float speed = 9f, camSensitivity = 100f;
     private Vector3 movement;
 
     /*void Start()
