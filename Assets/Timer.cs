@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using System;
 
 public class Timer : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class Timer : MonoBehaviour
     void Start()
     {
         startTime = Time.time;
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Finished");
+        fin = true;
     }
 
     void Update()

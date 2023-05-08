@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("Pausing");
             if (!resumeButton.activeSelf)
             {
                 resumeButton.SetActive(true);

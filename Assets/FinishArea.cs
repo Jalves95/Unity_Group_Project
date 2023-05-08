@@ -7,6 +7,6 @@ public class FinishArea : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        GameObject.Find("UIManager").SendMessage("Finish"); 
+        Debug.Log("Finished"); 
     }
 }
