@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject canvas;
+    public GameObject resumeButton;
+    public GameObject exitButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,15 +19,17 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (!canvas.activeSelf)
+            if (!resumeButton.activeSelf)
             {
-                canvas.SetActive(true);
+                resumeButton.SetActive(true);
+                exitButton.SetActive(true);
                 Cursor.lockState = CursorLockMode.None;
                 Time.timeScale = 0;
             }
             else
             {
-                canvas.SetActive(false);
+                resumeButton.SetActive(false);
+                exitButton.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked;
                 Time.timeScale = 1;
             }
@@ -40,7 +44,8 @@ public class UIManager : MonoBehaviour
         }
         else if (buttonName == "Resume")
         {
-            canvas.SetActive(false);
+            resumeButton.SetActive(false);
+            exitButton.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1;
         }
